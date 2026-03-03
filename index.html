@@ -1,121 +1,455 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlackRoad Inc</title>
-    <meta name="description" content="Corporate entity and legal information">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            background: #000000;
-            color: #FFFFFF;
-            line-height: 1.6;
-        }
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 4rem 2rem;
-            background: radial-gradient(circle, rgba(119, 0, 255, 0.15), transparent 70%);
-        }
-        h1 {
-            font-size: clamp(3rem, 8vw, 6rem);
-            font-weight: 800;
-            margin-bottom: 2rem;
-            background: linear-gradient(135deg, #0066FF 0%, #00AAFF 50%, #00FFFF 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .icon { font-size: 6rem; margin-bottom: 2rem; }
-        .tagline {
-            font-size: clamp(1.25rem, 3vw, 2rem);
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 3rem;
-        }
-        .btn {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: linear-gradient(135deg, #0066FF 0%, #00AAFF 50%, #00FFFF 100%);
-            color: #FFF;
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: 600;
-            transition: transform 0.3s;
-            margin: 0.5rem;
-        }
-        .btn:hover { transform: translateY(-2px); }
-        .footer {
-            text-align: center;
-            padding: 3rem 2rem;
-            color: rgba(255, 255, 255, 0.5);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlackRoad Inc — Corporate &amp; Legal</title>
+  <meta name="description" content="BlackRoad OS, Inc. — The AI infrastructure company powering memory and continuity across 30,000 AI agents and 30,000 employees. CEO: Alexa Amundson.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://blackroadinc.us/">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://blackroadinc.us/">
+  <meta property="og:title" content="BlackRoad Inc — Corporate &amp; Legal">
+  <meta property="og:description" content="BlackRoad OS, Inc. — The AI infrastructure company powering memory and continuity across 30,000 AI agents and 30,000 employees.">
+  <meta property="og:site_name" content="BlackRoad Inc">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BlackRoad Inc — Corporate &amp; Legal">
+  <meta name="twitter:description" content="BlackRoad OS, Inc. — The AI infrastructure company powering memory and continuity across 30,000 AI agents and 30,000 employees.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖤</text></svg>">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
-    :root{--black:#000;--ink:#0A0A0A;--surface:#111;--border:#1A1A1A;--dim:#666;--sub:#999;--white:#FFF;--pink:#FF1D6C;--amber:#F5A623;--violet:#9C27B0;--blue:#2979FF;--green:#00FF88;--gradient:linear-gradient(135deg,#F5A623 0%,#FF1D6C 38.2%,#9C27B0 61.8%,#2979FF 100%);--xs:8px;--sm:13px;--md:21px;--lg:34px;--xl:55px;--xxl:89px}
-    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:'JetBrains Mono',monospace;background:#000;color:#fff;line-height:1.618;overflow-x:hidden;-webkit-font-smoothing:antialiased;padding-top:70px}
-    h1{font-size:clamp(40px,8vw,100px);font-weight:600;letter-spacing:-.02em;line-height:1.1;background:linear-gradient(135deg,#F5A623 0%,#FF1D6C 38.2%,#9C27B0 61.8%,#2979FF 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:21px}
-    h2{font-size:clamp(24px,4vw,48px);font-weight:600;letter-spacing:-.02em;color:#fff;margin-bottom:21px}
-    h3{font-size:clamp(16px,2vw,24px);font-weight:600;color:#fff;margin-bottom:13px}
-    h4,h5,h6{color:#fff}
-    p{color:#999;line-height:1.8;margin-bottom:21px}
-    a{color:#2979FF;text-decoration:none;transition:color .2s}
-    a:hover{color:#FF1D6C}
-    strong{color:#fff}
-    code{font-family:inherit;background:#111;color:#00FF88;padding:2px 6px;border:1px solid #1A1A1A}
-    pre{background:#0A0A0A;border:1px solid #1A1A1A;border-left:2px solid #FF1D6C;padding:21px 34px;color:#00FF88;overflow-x:auto;margin-bottom:34px}
-    hr{border:none;height:1px;background:linear-gradient(135deg,#F5A623,#FF1D6C,#9C27B0,#2979FF);opacity:.3;margin:55px 0}
-    nav,.nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;justify-content:space-between;align-items:center;padding:21px 55px;background:rgba(0,0,0,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid #1A1A1A}
-    nav a,.nav a{color:#999;font-size:13px}
-    nav a:hover,.nav a:hover{color:#fff}
-    .logo{font-size:20px;font-weight:700;background:linear-gradient(135deg,#F5A623 0%,#FF1D6C 38.2%,#9C27B0 61.8%,#2979FF 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-    header{padding:21px 55px 0;display:flex;justify-content:space-between;align-items:center}
-    header .logo{font-size:22px;font-weight:700;background:linear-gradient(135deg,#F5A623 0%,#FF1D6C 38.2%,#9C27B0 61.8%,#2979FF 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-    header nav{position:static;background:none;backdrop-filter:none;border:none;padding:0;display:flex;gap:34px}
-    .hero,section.hero{min-height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:89px 55px;position:relative;overflow:hidden}
-    .hero::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:500px;height:500px;background:radial-gradient(circle,rgba(255,29,108,.15) 0%,rgba(156,39,176,.1) 40%,transparent 70%);pointer-events:none;animation:orb 8s ease-in-out infinite}
-    @keyframes orb{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:.6}50%{transform:translate(-50%,-50%) scale(1.3);opacity:1}}
-    .hero p,.tagline{font-size:18px;max-width:600px;color:#999;margin-bottom:55px;position:relative;z-index:1}
-    .hero h1{position:relative;z-index:1}
-    .earth-glow,.hero-glow,.neural-bg{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(255,29,108,.07) 0%,transparent 60%);pointer-events:none}
-    section{padding:89px 55px;position:relative}
-    section:not(.hero){max-width:1200px;margin-left:auto;margin-right:auto}
-    section h2{color:#fff;-webkit-text-fill-color:#fff}
-    .btn,.btn-primary{display:inline-block;padding:13px 34px;font-family:inherit;font-size:14px;font-weight:600;background:#FF1D6C;color:#fff;text-decoration:none;border:none;cursor:pointer;transition:all .2s;position:relative;z-index:1}
-    .btn:hover,.btn-primary:hover{background:#fff;color:#000;transform:translateY(-2px)}
-    .features-grid,.ai-features,.pillars{display:flex;flex-wrap:wrap;gap:34px;justify-content:center}
-    .feature-card,.ai-feature,.pillar{background:rgba(255,255,255,.02);border:1px solid #1A1A1A;padding:55px;transition:all .3s;flex:1;min-width:220px;max-width:360px}
-    .feature-card:hover,.ai-feature:hover,.pillar:hover{background:rgba(255,255,255,.05);border-color:rgba(255,29,108,.4);transform:translateY(-4px)}
-    .feature-icon,.ai-feature-icon,.pillar-icon{font-size:28px;margin-bottom:21px;display:block}
-    .feature-card h3,.ai-feature-title,.pillar-name{color:#fff;margin-bottom:8px}
-    .feature-card p,.ai-feature-desc{font-size:14px;color:#666}
-    .badge,.ai-badge{display:inline-block;padding:4px 13px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;border:1px solid #1A1A1A;color:#999;margin-bottom:21px}
-    footer,.footer{padding:55px;border-top:1px solid #1A1A1A;color:#666;font-size:13px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:21px}
-    footer a,.footer a{color:#999}
-    footer a:hover,.footer a:hover{color:#FF1D6C}
-    @media(max-width:768px){nav,.nav{padding:21px}.hero,section.hero{padding:89px 21px}.features-grid,.ai-features,.pillars{flex-direction:column}.feature-card,.ai-feature{min-width:unset;max-width:unset}footer,.footer{flex-direction:column;text-align:center;padding:34px 21px}}
+    /* ── Design tokens (BlackRoad Brand System) ── */
+    :root {
+      --black:    #000;
+      --ink:      #0A0A0A;
+      --surface:  #111;
+      --border:   #1A1A1A;
+      --dim:      #666;
+      --sub:      #999;
+      --white:    #FFF;
+      --pink:     #FF1D6C;
+      --amber:    #F5A623;
+      --violet:   #9C27B0;
+      --blue:     #2979FF;
+      --green:    #00FF88;
+      --gradient: linear-gradient(135deg, #F5A623 0%, #FF1D6C 38.2%, #9C27B0 61.8%, #2979FF 100%);
+      /* Golden-ratio spacing: 8 → 13 → 21 → 34 → 55 → 89 → 144 */
+      --xs:  8px;
+      --sm:  13px;
+      --md:  21px;
+      --lg:  34px;
+      --xl:  55px;
+      --xxl: 89px;
+    }
+
+    /* ── Reset ── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    /* ── Base ── */
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'JetBrains Mono', monospace;
+      background: var(--black);
+      color: var(--white);
+      line-height: 1.618;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      padding-top: 70px;
+    }
+    h1 {
+      font-size: clamp(40px, 8vw, 100px);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: var(--md);
+    }
+    h2 {
+      font-size: clamp(24px, 4vw, 48px);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--white);
+      -webkit-text-fill-color: var(--white);
+      margin-bottom: var(--md);
+    }
+    h3 { font-size: clamp(16px, 2vw, 24px); font-weight: 600; color: var(--white); margin-bottom: var(--sm); }
+    p  { color: var(--sub); line-height: 1.8; margin-bottom: var(--md); }
+    a  { color: var(--blue); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--pink); }
+    strong { color: var(--white); }
+    hr { border: none; height: 1px; background: var(--gradient); opacity: 0.3; margin: var(--xl) 0; }
+
+    /* ── Navigation ── */
+    .site-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--md) var(--xl);
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-size: 18px;
+      font-weight: 700;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: var(--lg); list-style: none; }
+    .nav-links a { color: var(--sub); font-size: 13px; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--white); }
+
+    /* ── Hero ── */
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: var(--xxl) var(--xl);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(255,29,108,0.12) 0%, rgba(156,39,176,0.08) 40%, transparent 70%);
+      pointer-events: none;
+      animation: orb 8s ease-in-out infinite;
+    }
+    @keyframes orb {
+      0%, 100% { transform: translate(-50%,-50%) scale(1);   opacity: 0.6; }
+      50%       { transform: translate(-50%,-50%) scale(1.3); opacity: 1;   }
+    }
+    .hero h1, .hero p { position: relative; z-index: 1; }
+    .hero-badge {
+      display: inline-block;
+      padding: var(--xs) var(--sm);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border: 1px solid var(--border);
+      color: var(--sub);
+      margin-bottom: var(--lg);
+      position: relative;
+      z-index: 1;
+    }
+    .hero-tagline {
+      font-size: clamp(16px, 2vw, 20px);
+      max-width: 560px;
+      color: var(--sub);
+      margin-bottom: var(--xl);
+    }
+    .hero-actions { display: flex; gap: var(--md); flex-wrap: wrap; justify-content: center; position: relative; z-index: 1; }
+
+    /* ── Buttons ── */
+    .btn {
+      display: inline-block;
+      padding: var(--sm) var(--lg);
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      background: var(--pink);
+      color: var(--white);
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn:hover { background: var(--white); color: var(--black); transform: translateY(-2px); }
+    .btn-outline {
+      display: inline-block;
+      padding: var(--sm) var(--lg);
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      background: transparent;
+      color: var(--white);
+      text-decoration: none;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--pink); color: var(--pink); transform: translateY(-2px); }
+
+    /* ── Sections ── */
+    section { padding: var(--xxl) var(--xl); position: relative; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+
+    /* ── Stat strip ── */
+    .stats {
+      background: var(--ink);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: var(--xl) var(--xl);
+    }
+    .stats-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: var(--lg);
+      text-align: center;
+    }
+    .stat-value {
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 700;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+      margin-bottom: var(--xs);
+      display: block;
+    }
+    .stat-label { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dim); }
+
+    /* ── Cards ── */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: var(--lg);
+      margin-top: var(--xl);
+    }
+    .card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border);
+      padding: var(--xl);
+      transition: all 0.3s;
+    }
+    .card:hover {
+      background: rgba(255,255,255,0.05);
+      border-color: rgba(255,29,108,0.4);
+      transform: translateY(-4px);
+    }
+    .card-icon { font-size: 28px; margin-bottom: var(--md); display: block; }
+
+    /* ── Section badge ── */
+    .section-badge {
+      display: inline-block;
+      padding: var(--xs) var(--sm);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border: 1px solid var(--border);
+      color: var(--sub);
+      margin-bottom: var(--md);
+    }
+
+    /* ── Legal / contact ── */
+    .legal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: var(--lg);
+      margin-top: var(--xl);
+    }
+    .legal-item { border-left: 2px solid var(--pink); padding-left: var(--md); }
+    .legal-item h4 { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dim); margin-bottom: var(--xs); }
+    .legal-item p  { font-size: 15px; color: var(--white); margin-bottom: 0; }
+
+    /* ── Footer ── */
+    footer {
+      padding: var(--xl);
+      border-top: 1px solid var(--border);
+      color: var(--dim);
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--md);
+    }
+    footer a { color: var(--sub); }
+    footer a:hover { color: var(--pink); }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .site-nav { padding: var(--md); }
+      .nav-links { display: none; }
+      .hero, section { padding: var(--xxl) var(--md); }
+      footer { flex-direction: column; text-align: center; padding: var(--lg) var(--md); }
+    }
   </style>
 </head>
 <body>
-    <div class="hero">
+
+  <!-- Navigation -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="BlackRoad Inc home">BlackRoad Inc</a>
+    <ul class="nav-links" role="list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#mission">Mission</a></li>
+      <li><a href="#legal">Legal</a></li>
+      <li><a href="https://github.com/BlackRoad-OS" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+    </ul>
+  </nav>
+
+  <main aria-label="BlackRoad Inc corporate information">
+
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <span class="hero-badge">BlackRoad OS, Inc. — Corporate</span>
+      <h1 id="hero-heading">BlackRoad Inc</h1>
+      <p class="hero-tagline">The AI infrastructure company enabling entire organizations to operate through intelligent agents — at enterprise scale.</p>
+      <div class="hero-actions">
+        <a href="https://blackroad.io" class="btn" target="_blank" rel="noopener noreferrer">Explore BlackRoad OS</a>
+        <a href="#about" class="btn-outline">Learn More</a>
+      </div>
+    </section>
+
+    <!-- Stats strip -->
+    <div class="stats" aria-label="Company statistics">
+      <div class="stats-grid">
         <div>
-            <div class="icon">🏢</div>
-            <h1>BlackRoad Inc</h1>
-            <p class="tagline">Company • Legal • Corporate</p>
-            <a href="https://blackroad.io" class="btn">Explore BlackRoad OS</a>
-            <a href="https://github.com/BlackRoad-OS" class="btn">GitHub</a>
+          <span class="stat-value">30K+</span>
+          <span class="stat-label">AI Agents Supported</span>
         </div>
+        <div>
+          <span class="stat-value">30K+</span>
+          <span class="stat-label">Human Employees</span>
+        </div>
+        <div>
+          <span class="stat-value">578</span>
+          <span class="stat-label">Repositories</span>
+        </div>
+        <div>
+          <span class="stat-value">15</span>
+          <span class="stat-label">Organizations</span>
+        </div>
+      </div>
     </div>
-    <footer class="footer">
-        <p>&copy; 2025 BlackRoad. Part of the BlackRoad OS ecosystem.</p>
-    </footer>
+
+    <!-- About -->
+    <section id="about" aria-labelledby="about-heading">
+      <div class="section-inner">
+        <span class="section-badge">About</span>
+        <h2 id="about-heading">Who We Are</h2>
+        <p>BlackRoad OS, Inc. is the corporate entity behind the BlackRoad OS ecosystem — an AI infrastructure layer built above Google, OpenAI, and Anthropic that manages model memory and continuity at enterprise scale.</p>
+        <p>Founded and operated by CEO <strong>Alexa Amundson</strong>, BlackRoad is engineered to power organizations where every workflow, decision, and operation is executed by AI agents working alongside human teams.</p>
+
+        <div class="cards">
+          <div class="card">
+            <span class="card-icon" aria-hidden="true">🧬</span>
+            <h3>AI Memory &amp; Continuity</h3>
+            <p>Persistent context across models, sessions, and agents — so your AI workforce never forgets.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon" aria-hidden="true">⚡</span>
+            <h3>Enterprise Scale</h3>
+            <p>Designed from day one for 30,000 AI agents running in parallel alongside 30,000 human employees.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon" aria-hidden="true">🔒</span>
+            <h3>Proprietary Infrastructure</h3>
+            <p>578 repositories across 15 specialized organizations — a purpose-built empire for AI-native operations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- Mission -->
+    <section id="mission" aria-labelledby="mission-heading">
+      <div class="section-inner">
+        <span class="section-badge">Mission</span>
+        <h2 id="mission-heading">What We Build</h2>
+        <p>BlackRoad OS sits as an intelligent API layer above the world's leading AI providers. We solve the hardest problem in enterprise AI: <strong>memory</strong>. Our platform ensures that every agent, every thread, and every decision is contextually aware — creating a continuous, coherent AI workforce.</p>
+
+        <div class="cards">
+          <div class="card">
+            <span class="card-icon" aria-hidden="true">🌐</span>
+            <h3>Unified AI API Layer</h3>
+            <p>One interface above Google, OpenAI, and Anthropic — route, balance, and orchestrate with a single integration.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon" aria-hidden="true">🤖</span>
+            <h3>Agent Orchestration</h3>
+            <p>Run thousands of specialized agents in concert, each with persistent memory and defined roles in your organization.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon" aria-hidden="true">🏛️</span>
+            <h3>Enterprise Governance</h3>
+            <p>Compliance-ready infrastructure adhering to OWASP, NIST, and SOC 2 Type II standards.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- Legal / Contact -->
+    <section id="legal" aria-labelledby="legal-heading">
+      <div class="section-inner">
+        <span class="section-badge">Corporate &amp; Legal</span>
+        <h2 id="legal-heading">Corporate Information</h2>
+        <p>BlackRoad OS, Inc. is a private company. All software, systems, and intellectual property are <strong>proprietary and confidential</strong>. Use is restricted to authorized testing, evaluation, and educational purposes unless written permission is granted.</p>
+
+        <div class="legal-grid">
+          <div class="legal-item">
+            <h4>Legal Name</h4>
+            <p>BlackRoad OS, Inc.</p>
+          </div>
+          <div class="legal-item">
+            <h4>Chief Executive Officer</h4>
+            <p>Alexa Amundson</p>
+          </div>
+          <div class="legal-item">
+            <h4>CRD Number</h4>
+            <p>7794541</p>
+          </div>
+          <div class="legal-item">
+            <h4>Licensing Inquiries</h4>
+            <p><a href="mailto:blackroad.systems@gmail.com">blackroad.systems@gmail.com</a></p>
+          </div>
+          <div class="legal-item">
+            <h4>Security Disclosures</h4>
+            <p><a href="mailto:blackroad.systems@gmail.com">blackroad.systems@gmail.com</a></p>
+          </div>
+          <div class="legal-item">
+            <h4>GitHub Organization</h4>
+            <p><a href="https://github.com/BlackRoad-OS" target="_blank" rel="noopener noreferrer">github.com/BlackRoad-OS</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <span>&copy; 2026 BlackRoad OS, Inc. All Rights Reserved. Proprietary and Confidential.</span>
+    <nav aria-label="Footer navigation">
+      <a href="https://github.com/BlackRoad-OS" target="_blank" rel="noopener noreferrer">GitHub</a>
+      &nbsp;·&nbsp;
+      <a href="mailto:blackroad.systems@gmail.com">Contact</a>
+      &nbsp;·&nbsp;
+      <a href="https://blackroad.io" target="_blank" rel="noopener noreferrer">BlackRoad OS</a>
+    </nav>
+  </footer>
+
 </body>
 </html>
