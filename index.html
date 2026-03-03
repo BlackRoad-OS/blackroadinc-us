@@ -288,7 +288,11 @@
     /* ── Responsive ── */
     @media (max-width: 768px) {
       .site-nav { padding: var(--md); }
-      .nav-links { display: none; }
+      .nav-links {
+        flex-wrap: wrap;
+        gap: var(--sm);
+        margin-top: var(--sm);
+      }
       .hero, section { padding: var(--xxl) var(--md); }
       footer { flex-direction: column; text-align: center; padding: var(--lg) var(--md); }
     }
